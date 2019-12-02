@@ -9,14 +9,21 @@
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
         </e>
-        <e p="Models" t="Include">
-          <e p="ErrorViewModel.cs" t="Include" />
+        <e p="Data" t="Include">
+          <e p="Models" t="Include">
+            <e p="CarPart.cs" t="Include" />
+            <e p="Category.cs" t="Include" />
+          </e>
         </e>
+        <e p="Migrations" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="ViewModels" t="Include">
+          <e p="ErrorViewModel.cs" t="Include" />
+        </e>
         <e p="Views" t="Include">
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />

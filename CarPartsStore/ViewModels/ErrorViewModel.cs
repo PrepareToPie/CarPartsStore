@@ -1,6 +1,4 @@
-using System;
-
-namespace CarPartsStore.Models
+namespace CarPartsStore.ViewModels
 {
     public class ErrorViewModel
     {
