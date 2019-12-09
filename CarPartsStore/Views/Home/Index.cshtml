@@ -1,8 +1,37 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@*@{
+        ViewData["Title"] = "Home Page";
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+@model IEnumerable<CarPartsStore.Data.Models.CarPart>
+@{
+    ViewBag.Title = "Все детали";
+}
+<a asp-action="Create">Добавить деталь</a>
+<table class="table">
+    <tr>
+        <td>Название</td>
+        @*<td>Производитель</td>
+        <td>Полное описание</td>
+        <td>Краткое описание</td>*@
+        <td>Цена</td>
+        @*<td>URL картинк</td>
+        <td>URL миниатюры</td>*@
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            @*<td>@item.Manufacturer</td>
+            <td>@item.LongDescription</td>
+            <td>@item.ShortDescription</td>*@
+            <td>@item.Price</td>
+            @*<td>@item.ImageURL</td>
+            <td>@item.ImageThumbnailURL</td>*@
+        </tr>
+    }
+</table>
