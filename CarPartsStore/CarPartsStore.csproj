@@ -7,6 +7,7 @@
 
     <ItemGroup>
       <Folder Include="Components" />
+      <Folder Include="Data\Interfaces" />
       <Folder Include="Migrations" />
       <Folder Include="TagHelpers" />
     </ItemGroup>

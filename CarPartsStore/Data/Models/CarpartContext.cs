@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CarPartsStore.Data.Models
 {
-    public sealed class CarPartContext : DbContext
+    public sealed class CarpartContext : DbContext
     {
-        public DbSet<CarPart> CarParts { get; set; }
-        public CarPartContext(DbContextOptions<CarPartContext> options)
+        public DbSet<Carpart> CarParts { get; set; }
+        public CarpartContext(DbContextOptions<CarpartContext> options)
             : base(options)
         {
             Database.EnsureCreated();

@@ -26,7 +26,7 @@ namespace CarPartsStore
         public void ConfigureServices(IServiceCollection services)
         {
             // ��������� �������� MobileContext � �������� ������� � ����������
-            services.AddDbContext<CarPartContext>(options =>
+            services.AddDbContext<CarpartContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
             services.AddMvc();

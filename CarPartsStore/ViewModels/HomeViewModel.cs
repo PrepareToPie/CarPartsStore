@@ -7,7 +7,7 @@ namespace CarPartsStore.ViewModels
     public class HomeViewModel
     {
 
-        public IEnumerable<CarPart> MyProperty
+        public IEnumerable<Carpart> MyProperty
         {
             get;
             set;

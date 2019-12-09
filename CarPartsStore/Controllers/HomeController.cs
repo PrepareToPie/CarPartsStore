@@ -13,9 +13,9 @@ namespace CarPartsStore.Controllers
 {
     public class HomeController : Controller
     {
-        private CarPartContext db;
+        private CarpartContext db;
         private readonly ILogger<HomeController> _logger;
-        public HomeController(ILogger<HomeController> logger, CarPartContext context)
+        public HomeController(ILogger<HomeController> logger, CarpartContext context)
         {
             _logger = logger;
             db = context;
@@ -29,9 +29,9 @@ namespace CarPartsStore.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(CarPart carPart)
+        public async Task<IActionResult> Create(Carpart carpart)
         {
-            db.CarParts.Add(carPart);
+            db.CarParts.Add(carpart);
             await db.SaveChangesAsync();
             return RedirectToAction("Indexing");
         }
