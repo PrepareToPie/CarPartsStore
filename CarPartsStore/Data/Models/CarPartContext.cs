@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarPartsStore.Data.Models
 {
-    public class CarPartContext : DbContext
+    public sealed class CarPartContext : DbContext
     {
         public DbSet<CarPart> CarParts { get; set; }
         public CarPartContext(DbContextOptions<CarPartContext> options)
