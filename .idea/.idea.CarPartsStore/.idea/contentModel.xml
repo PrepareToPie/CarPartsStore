@@ -8,14 +8,22 @@
         <e p="CarPartsStore.csproj" t="IncludeRecursive" />
         <e p="Components" t="Include" />
         <e p="Controllers" t="Include">
+          <e p="CarpartController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
-          <e p="SparepartController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
+          <e p="Interfaces" t="Include">
+            <e p="ICarpartRepository.cs" t="Include" />
+            <e p="ICategoryRepository.cs" t="Include" />
+          </e>
+          <e p="Mocks" t="Include">
+            <e p="MockCarpartRepository.cs" t="Include" />
+            <e p="MockCategoryRepository.cs" t="Include" />
+          </e>
           <e p="Models" t="Include">
             <e p="Car.cs" t="Include" />
-            <e p="CarPart.cs" t="Include" />
-            <e p="CarPartContext.cs" t="Include" />
+            <e p="Carpart.cs" t="Include" />
+            <e p="CarpartContext.cs" t="Include" />
             <e p="Category.cs" t="Include" />
           </e>
         </e>
@@ -27,10 +35,14 @@
         <e p="Startup.cs" t="Include" />
         <e p="TagHelpers" t="Include" />
         <e p="ViewModels" t="Include">
+          <e p="CarpartListViewModel.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="HomeViewModel.cs" t="Include" />
         </e>
         <e p="Views" t="Include">
+          <e p="Carpart" t="Include">
+            <e p="List.cshtml" t="Include" />
+          </e>
           <e p="Home" t="Include">
             <e p="Create.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
@@ -47,6 +59,7 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="bower.json" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
@@ -55,10 +68,12 @@
           </e>
         </e>
         <e p="wwwroot" t="Include">
+          <e p="content" t="Include" />
           <e p="css" t="Include">
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
+          <e p="images" t="Include" />
           <e p="js" t="Include">
             <e p="site.js" t="Include" />
           </e>

@@ -7,13 +7,15 @@
 
     <ItemGroup>
       <Folder Include="Components" />
-      <Folder Include="Data\Interfaces" />
       <Folder Include="Migrations" />
       <Folder Include="TagHelpers" />
+      <Folder Include="wwwroot\content" />
+      <Folder Include="wwwroot\images" />
     </ItemGroup>
 
 
     <ItemGroup>
+      <PackageReference Include="bootstrap" Version="4.4.1" />
       <PackageReference Include="Identity.EntityFrameworkCore" Version="1.2.7" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0" />

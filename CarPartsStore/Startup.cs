@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CarPartsStore.Data.Interfaces;
+using CarPartsStore.Data.Mocks;
 using CarPartsStore.Data.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,6 +27,8 @@ namespace CarPartsStore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<ICarpartRepository, MockCarpartRepository>();
+            services.AddTransient<ICategoryRepository>();
             // ��������� �������� MobileContext � �������� ������� � ����������
             services.AddDbContext<CarpartContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));

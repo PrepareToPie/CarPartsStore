@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -20,10 +20,10 @@ namespace CarPartsStore.Controllers
             _logger = logger;
             db = context;
         }
-        public async Task<IActionResult> Indexing()
+        /*public async Task<IActionResult> Indexing()
         {
             return View(await db.CarParts.ToListAsync());
-        }
+        }#1#
         public IActionResult Create()
         {
             return View();
@@ -53,4 +53,4 @@ namespace CarPartsStore.Controllers
             return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
         }
     }
-}
+}*/

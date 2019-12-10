@@ -1,0 +1,15 @@
+<div>
+    <h1>Carparts are shown here:</h1>
+</div>
+
+<h2>@Model.CurrentCategory</h2>
+
+@{
+    foreach (var carpart in Model.Carparts)
+    {
+        <div>
+            <h4>Carpart name: @carpart.Name</h4>
+            <p>Price: @carpart.Price.ToString( )</p>
+        </div>
+    }
+}
