@@ -28,6 +28,7 @@
             <e p="Car.cs" t="Include" />
             <e p="Carpart.cs" t="Include" />
             <e p="Category.cs" t="Include" />
+            <e p="DbInitializer.cs" t="Include" />
           </e>
           <e p="Repositories" t="Include">
             <e p="CarRepository.cs" t="Include" />
