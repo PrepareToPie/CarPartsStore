@@ -5,7 +5,7 @@ namespace CarPartsStore.Data.Models
     //Модель для автозапчасти (подправишь что будет надо)
     public class Carpart
     {
-        public int Id { get; set; }
+        public int CarpartId { get; set; }
         public string Name { get; set; }
         public string Manufacturer { get; set; }
         public string LongDescription { get; set; }
@@ -14,11 +14,8 @@ namespace CarPartsStore.Data.Models
         public string ImageUrl { get; set; }
         public string ImageThumbnailUrl { get; set; }
         public int InStock { get; set; }
-        //public string VIN { get; set; }
         [ForeignKey("Vin")]
         public Car Car { get; set; }
-        public int CategoryId { get; set; }
-        [ForeignKey("CategoryId")]
         public virtual Category Category { get; set; }
     }
 }

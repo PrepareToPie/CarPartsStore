@@ -1,0 +1,23 @@
+@using CarPartsStore.Data.Models
+<div>
+    <h1>Carparts are shown here:</h1>
+</div>
+
+<h2>@Model.CurrentCategory</h2>
+
+@{
+    foreach (var carpart in Model.Carparts)
+    {
+        <div class="col-sm-4 col-lg4 col-md-4">
+            <div class="thumbnail">
+                <img src="@carpart.ImageThumbnailUrl" alt=""/>
+                <div class="caption">
+                    <h3 class="pull-right">@carpart.Price.ToString()</h3>
+                    <h3>
+                        <a>@carpart.Name</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    }
+}
