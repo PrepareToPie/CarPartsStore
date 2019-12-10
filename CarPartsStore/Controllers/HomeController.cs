@@ -13,20 +13,17 @@ namespace CarPartsStore.Controllers
 {
     public class HomeController : Controller
     {
-        private CarPartContext db;
+        private CarpartContext db;
         private readonly ILogger<HomeController> _logger;
-        public HomeController(ILogger<HomeController> logger, CarPartContext context)
+        public HomeController(ILogger<HomeController> logger, CarpartContext context)
         {
             _logger = logger;
             db = context;
         }
         /*public async Task<IActionResult> Indexing()
-        public async Task<IActionResult> Index()
         {
             return View(await db.CarParts.ToListAsync());
         }#1#
-            return View(await db.Carparts.ToListAsync());
-        }
         public IActionResult Create()
         {
             return View();
@@ -34,9 +31,26 @@ namespace CarPartsStore.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Carpart carpart)
         {
-            db.Carparts.Add(carpart);
+            db.CarParts.Add(carpart);
             await db.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("Indexing");
+        }
+
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
         }
     }
 }*/
