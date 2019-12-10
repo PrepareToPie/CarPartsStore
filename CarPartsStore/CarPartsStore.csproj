@@ -9,7 +9,6 @@
       <Folder Include="Components" />
       <Folder Include="Migrations" />
       <Folder Include="TagHelpers" />
-      <Folder Include="wwwroot\content" />
       <Folder Include="wwwroot\images" />
     </ItemGroup>
 
@@ -19,20 +18,18 @@
       <PackageReference Include="Identity.EntityFrameworkCore" Version="1.2.7" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
       <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.0" />
-      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.0-rc1.final" />
     </ItemGroup>
 
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

@@ -5,7 +5,7 @@ namespace CarPartsStore.Data.Interfaces
 {
     public interface ICarpartRepository
     {
-        IEnumerable<Carpart> Carparts { get; set; }
+        IEnumerable<Carpart> Carparts { get; }
         Carpart GetCarpartById(int carpartId);
     }
 }

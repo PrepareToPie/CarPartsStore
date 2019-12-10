@@ -26,7 +26,7 @@ namespace CarPartsStore.Data.Mocks
                             Vin = "Vin"
                         },
                         Category = _categoryRepository.Categories.First(),
-                        Id = 1,
+                        CarpartId = 1,
                         ImageThumbnailUrl = "ImageThumbUrl",
                         ImageUrl = "ImageUrl",
                         InStock = 123,
