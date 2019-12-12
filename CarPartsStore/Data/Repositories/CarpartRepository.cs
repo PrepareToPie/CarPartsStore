@@ -16,6 +16,8 @@ namespace CarPartsStore.Data.Repositories
 
         public IEnumerable<Carpart> Carparts => _appDbContext.Carparts.Include(c => c.Category);
 
+        public IEnumerable<Carpart> IsInStock =>
+            _appDbContext.Carparts.Where(p => p.InStock > 0).Include(c => c.Category);
         public Carpart GetCarpartById(int carpartId) =>
             _appDbContext.Carparts.FirstOrDefault(p => p.CarpartId == carpartId);
     }
