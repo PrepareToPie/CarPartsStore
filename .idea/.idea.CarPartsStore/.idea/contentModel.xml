@@ -8,16 +8,10 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="CarPartsStore" t="IncludeRecursive">
         <e p="CarPartsStore.csproj" t="IncludeRecursive" />
-        <e p="Components" t="Include">
-          <e p="CategoryMenu.cs" t="Include" />
-          <e p="ShopCartSummary.cs" t="Include" />
-        </e>
+        <e p="Components" t="Include" />
         <e p="Controllers" t="Include">
           <e p="CarpartController.cs" t="Include" />
-          <e p="ContactController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
-          <e p="OrderController.cs" t="Include" />
-          <e p="ShopCartController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="AppDbContext.cs" t="Include" />
@@ -25,7 +19,6 @@
             <e p="ICarRepository.cs" t="Include" />
             <e p="ICarpartRepository.cs" t="Include" />
             <e p="ICategoryRepository.cs" t="Include" />
-            <e p="IOrderRepository.cs" t="Include" />
           </e>
           <e p="Mocks" t="Include">
             <e p="MockCarpartRepository.cs" t="Include" />
@@ -36,21 +29,16 @@
             <e p="Carpart.cs" t="Include" />
             <e p="Category.cs" t="Include" />
             <e p="DbInitializer.cs" t="Include" />
-            <e p="Order.cs" t="Include" />
-            <e p="OrderDetail.cs" t="Include" />
-            <e p="ShopCart.cs" t="Include" />
-            <e p="ShopCartItem.cs" t="Include" />
           </e>
           <e p="Repositories" t="Include">
             <e p="CarRepository.cs" t="Include" />
             <e p="CarpartRepository.cs" t="Include" />
             <e p="CategoryRepository.cs" t="Include" />
-            <e p="OrderRepository.cs" t="Include" />
           </e>
         </e>
         <e p="Migrations" t="Include">
-          <e p="20191216231338_Order.Designer.cs" t="Include" />
-          <e p="20191216231338_Order.cs" t="Include" />
+          <e p="20191210032556_InitialMigration.Designer.cs" t="Include" />
+          <e p="20191210032556_InitialMigration.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
@@ -58,47 +46,23 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="TagHelpers" t="Include">
-          <e p="EmailTagHelper.cs" t="Include" />
-        </e>
+        <e p="TagHelpers" t="Include" />
         <e p="ViewModels" t="Include">
           <e p="CarpartListViewModel.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="HomeViewModel.cs" t="Include" />
-          <e p="ShopCartViewModel.cs" t="Include" />
         </e>
         <e p="Views" t="Include">
           <e p="Carpart" t="Include">
             <e p="List.cshtml" t="Include" />
           </e>
-          <e p="Contact" t="Include">
-            <e p="Index.cshtml" t="Include" />
-          </e>
           <e p="Home" t="Include">
-            <e p="Index.cshtml" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
           </e>
-          <e p="Order" t="Include">
-            <e p="Checkout.cshtml" t="Include" />
-          </e>
           <e p="Shared" t="Include">
-            <e p="Carousel.cshtml" t="Include" />
-            <e p="CarpartsSummary.cshtml" t="Include" />
-            <e p="Components" t="Include">
-              <e p="CategoryMenu" t="Include">
-                <e p="Default.cshtml" t="Include" />
-              </e>
-              <e p="ShopCartSummary" t="Include">
-                <e p="Default.cshtml" t="Include" />
-                <e p="Default.cshtml.cs" t="Include" />
-              </e>
-            </e>
             <e p="Error.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
-          </e>
-          <e p="ShopCart" t="Include">
-            <e p="Index.cshtml" t="Include" />
           </e>
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
@@ -107,9 +71,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="bower.json" t="Include" />
-        <e p="mono_crash.mem.1328.1.blob" t="Include" />
-        <e p="mono_crash.mem.25985.1.blob" t="Include" />
-        <e p="mono_crash.mem.812.1.blob" t="Include" />
+        <e p="mono_crash.mem.23799.1.blob" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
@@ -120,22 +82,13 @@
         </e>
         <e p="wwwroot" t="Include">
           <e p="content" t="Include">
-            <e p="_variables.scss" t="Include" />
-            <e p="custom.sass" t="Include" />
             <e p="site.css" t="Include" />
           </e>
-          <e p="css" t="Include" />
+          <e p="css" t="Include">
+            <e p="site.css" t="Include" />
+          </e>
           <e p="favicon.ico" t="Include" />
-          <e p="image" t="Include">
-            <e p="bmw_brake.jpg" t="Include" />
-            <e p="bmw_brake_noorig.jpg" t="Include" />
-            <e p="michelin.jpg" t="Include" />
-            <e p="toyota_brake.jpg" t="Include" />
-          </e>
-          <e p="images" t="Include">
-            <e p="img1.jpg" t="Include" />
-            <e p="menu.png" t="Include" />
-          </e>
+          <e p="images" t="Include" />
           <e p="js" t="Include">
             <e p="site.js" t="Include" />
           </e>

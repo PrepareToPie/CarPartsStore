@@ -1,6 +1,3 @@
 bin/
 obj/
 /packages/
-/CarPartsStore/appsettings.json
-/.vs
-/.idea

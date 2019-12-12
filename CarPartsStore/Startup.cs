@@ -60,9 +60,11 @@ namespace CarPartsStore
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
             app.UseSession();
             app.UseRouting();
             app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
