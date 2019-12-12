@@ -10,13 +10,13 @@ namespace CarPartsStore.Data.Models
 {
     public class ShopCart
     {
-        private AppDbContext _appDbContext;
+        private readonly AppDbContext _appDbContext;
         public ShopCart(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
         public string ShopCartId { get; set; }
-        public List<ShopCartItem> listShopItems { get; set; }
+        public List<ShopCartItem> ListShopItems { get; set; }
         public static ShopCart GetCart(IServiceProvider services)
         {
             ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
@@ -32,16 +32,39 @@ namespace CarPartsStore.Data.Models
             _appDbContext.ShopCartItems.Add(new ShopCartItem 
             {
                 ShopCartId = ShopCartId,
-                carpart = carpart,
-                price = carpart.Price
+                Carpart = carpart,
+                Price = carpart.Price
             });
 
             _appDbContext.SaveChanges();
         }
 
-        public List<ShopCartItem> getShopItems()
+        // public int RemoveFromCart(Carpart carpart)
+        // {
+        //     var shoppingCartItem = _appDbContext.ShopCartItems.SingleOrDefault(s =>
+        //         s.Carpart.CarpartId == carpart.CarpartId && s.ShopCartId == ShopCartId);
+        //     var localAmount = 0;
+        //     if (shoppingCartItem != null)
+        //     {
+        //         if(shoppingCartItem.)
+        //     }
+        // }
+        public void ClearCart()
         {
-            return _appDbContext.ShopCartItems.Where(c => c.ShopCartId == ShopCartId).Include(s => s.carpart).ToList();
+            var cartItems = _appDbContext.ShopCartItems.Where(cart => cart.ShopCartId == ShopCartId);
+            _appDbContext.ShopCartItems.RemoveRange(cartItems);
+            _appDbContext.SaveChanges();
         }
+        public List<ShopCartItem> GetShopItems()
+        {
+            
+            return _appDbContext.ShopCartItems.Where(c => c.ShopCartId == ShopCartId).Include(s => s.Carpart).ToList();
+        }
+
+        // public GetShoppingCartTotal()
+        // {
+        //     var total = _appDbContext.ShopCartItems.Where(c=>c.ShopCartId == ShopCartId).Select(c=>c. * c.)
+        // }
+            
     }
 }

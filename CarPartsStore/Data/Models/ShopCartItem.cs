@@ -7,10 +7,11 @@ namespace CarPartsStore.Data.Models
 {
     public class ShopCartItem
     {
-        public int id { get; set; }
-        public Carpart carpart { get; set; }
-        public int price { get; set; }
-
+        public int Id { get; set; }
+        public Carpart Carpart { get; set; }
+        // public int Amount { get; set; }
+        public int Price { get; set; }
+        
         public string ShopCartId { get; set; }
     }
 }

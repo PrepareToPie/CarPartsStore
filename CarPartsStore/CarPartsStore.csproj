@@ -24,6 +24,7 @@
 
     <ItemGroup>
       <Folder Include="Components" />
+      <Folder Include="Migrations" />
       <Folder Include="TagHelpers" />
       <Folder Include="wwwroot\images" />
     </ItemGroup>
