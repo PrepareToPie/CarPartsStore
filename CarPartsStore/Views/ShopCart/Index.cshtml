@@ -1,0 +1,22 @@
+﻿@model ShopCartViewModel
+
+    @{
+        if (Model.shopCart.ListShopItems.Count == 0)
+        {
+            <h3 class="alert-danger">Корзина пуста!</h3>
+        }
+        else
+        {
+            foreach (var el in Model.shopCart.ListShopItems)
+            {
+                <div class="alert alert-warning mt-3">
+                    <b>Товар:</b> @el.Carpart.Name<br/>
+                    <b>Цена:</b> @el.Carpart.Price.ToString("c")
+                    <b>О товаре:</b> @el.Carpart.ShortDescription
+                </div>
+                <div class="btn btn-light"><a asp-controller="ShopCart" asp-action="">Оплатить</a></div>
+            }
+        }
+            
+        
+    }

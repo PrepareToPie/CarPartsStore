@@ -29,16 +29,55 @@ namespace CarPartsStore.Data.Models
                 context.AddRange(
                     new Carpart
                     {
-                        Car = Cars["VIN"],
-                        Category = Categories["Category 1"],
-                        Name = "Detail 1",
-                        Manufacturer = "Manufacturer 1",
-                        InStock = 123,
-                        Price = 1230,
-                        ShortDescription = "Short descript",
-                        LongDescription = "Long descript",
-                        ImageUrl = "imageurl",
-                        ImageThumbnailUrl = "imagethumbnailurl"
+                        Car = Cars["ASdasf12312s"],
+                        Category = Categories["Тормозные диски"],
+                        Name = "BMW original",
+                        Manufacturer = "Germany",
+                        InStock = 23,
+                        Price = 10000,
+                        ShortDescription = "Оригинальные тормозные диски",
+                        LongDescription = "Оригинальные и высококачественные тормозные диски",
+                        ImageUrl = "/image/bmw_brake.jpg",
+                        ImageThumbnailUrl = "/image/bmw_brake.jpg"
+                    },
+                    new Carpart
+                    {
+                        Car = Cars["ASdasf12312s"],
+                        Category = Categories["Тормозные диски"],
+                        Name = "ShanJo",
+                        Manufacturer = "China",
+                        InStock = 21,
+                        Price = 3000,
+                        ShortDescription = "Неоригинальные тормозные диски",
+                        LongDescription = "Неоригинальные и недолгосрочные тормозные диски",
+                        ImageUrl = "/image/bmw_brake_noorig.jpg",
+                        ImageThumbnailUrl = "/image/bmw_brake_noorig.jpg"
+                    },
+                    new Carpart
+                    {
+                        Car = Cars["HTtbda32132n"],
+                        Category = Categories["Тормозные диски"],
+                        Name = "Toyota original",
+                        Manufacturer = "Japan",
+                        InStock = 12,
+                        Price = 6000,
+                        ShortDescription = "Оригинальные тормозные диски",
+                        LongDescription = "Оригинальные и высококачественные тормозные диски",
+                        ImageUrl = "/image/toyota_brake.jpg",
+                        ImageThumbnailUrl = "/image/toyota_brake.jpg"
+                    },
+                    new Carpart
+                    {
+                        Car = Cars["HTtbda32132n"],
+                        Category = Categories["Колесные Шины"],
+                        Name = "Michelin",
+                        Manufacturer = "France",
+                        InStock = 5,
+                        Price = 8000,
+                        ShortDescription = "Зимние шины",
+                        LongDescription = "Высококачественные долгосрочные зимние шины",
+                        ImageUrl = "/image/michelin.jpg",
+                        ImageThumbnailUrl = "/image/michelin.jpg"
                     }
                     );
             }
@@ -56,8 +95,8 @@ namespace CarPartsStore.Data.Models
                 {
                     var genresList = new Category[]
                     {
-                        new Category {CategoryName = "Category 1", Description = "All category 1"},
-                        new Category {CategoryName = "Category 2", Description = "All category 2"}
+                        new Category {CategoryName = "Тормозные диски", Description = "Комплект тормозных дисков"},
+                        new Category {CategoryName = "Колесные Шины", Description = "Комплект зимних шин"}
                     };
 
                     _categories = new Dictionary<string, Category>();
@@ -83,7 +122,7 @@ namespace CarPartsStore.Data.Models
                     var carList = new Car[]
                     {
                         new Car {Vin = "ASdasf12312s", Mark = "BMW", Model = "i8"},
-                        new Car {Vin = "VIN", Mark = "Mark", Model = "Model"}
+                        new Car {Vin = "HTtbda32132n", Mark = "Toyota", Model = "Camry"}
                     };
                     _cars = new Dictionary<string, Car>();
                     foreach (var car in carList)
