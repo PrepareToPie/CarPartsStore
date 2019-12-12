@@ -4,10 +4,26 @@
         <TargetFramework>netcoreapp3.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Remove="Migrations\20191211184229_Initial.cs" />
+      <Compile Remove="Migrations\20191211184229_Initial.Designer.cs" />
+      <Compile Remove="Migrations\20191211202430_vvb.cs" />
+      <Compile Remove="Migrations\20191211202430_vvb.Designer.cs" />
+      <Compile Remove="Migrations\20191211202526_Initial.cs" />
+      <Compile Remove="Migrations\20191211202526_Initial.Designer.cs" />
+      <Compile Remove="Migrations\20191211212729_ShopCart.cs" />
+      <Compile Remove="Migrations\20191211212729_ShopCart.Designer.cs" />
+      <Compile Remove="Migrations\20191211232426_NewData.cs" />
+      <Compile Remove="Migrations\20191211232426_NewData.Designer.cs" />
+      <Compile Remove="Migrations\20191211234656_Newbd.cs" />
+      <Compile Remove="Migrations\20191211234656_Newbd.Designer.cs" />
+      <Compile Remove="Migrations\20191211235139_New.cs" />
+      <Compile Remove="Migrations\20191211235139_New.Designer.cs" />
+    </ItemGroup>
+
 
     <ItemGroup>
       <Folder Include="Components" />
-      <Folder Include="Migrations" />
       <Folder Include="TagHelpers" />
       <Folder Include="wwwroot\images" />
     </ItemGroup>
@@ -16,13 +32,16 @@
     <ItemGroup>
       <PackageReference Include="bootstrap" Version="4.4.1" />
       <PackageReference Include="Identity.EntityFrameworkCore" Version="1.2.7" />
+      <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
+      <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="3.1.0" />
       <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.0" />

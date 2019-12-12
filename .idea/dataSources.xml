@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="slnx" uuid="f724081e-6c40-470a-9c12-63d20ffceb5f">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\ASUS\source\repos\CarPartsStore\.vs\slnx.sqlite</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="storage" uuid="cd6a81af-f5d8-425d-a985-361ba3c65aa3">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\ASUS\source\repos\CarPartsStore\.vs\CarPartsStore\v16\Server\sqlite3\storage.ide</jdbc-url>
+    </data-source>
+  </component>
+</project>
