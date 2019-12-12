@@ -18,6 +18,5 @@ namespace CarPartsStore.Data
         public DbSet<Carpart> Carparts { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Car> Cars { get; set; }
-        public DbSet<ShopCartItem> ShopCartItems { get; set; }
     }
 }
