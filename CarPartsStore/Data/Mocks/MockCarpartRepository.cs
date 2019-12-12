@@ -3,7 +3,7 @@ using System.Linq;
 using CarPartsStore.Data.Interfaces;
 using CarPartsStore.Data.Models;
 
-namespace CarPartsStore.Data.Mocks
+/*namespace CarPartsStore.Data.Mocks
 {
     public class MockCarpartRepository:ICarpartRepository
     {
@@ -43,4 +43,4 @@ namespace CarPartsStore.Data.Mocks
             throw new System.NotImplementedException();
         }
     }
-}
+}*/

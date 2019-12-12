@@ -39,6 +39,10 @@
         <e p="Migrations" t="Include">
           <e p="20191210032556_InitialMigration.Designer.cs" t="Include" />
           <e p="20191210032556_InitialMigration.cs" t="Include" />
+          <e p="20191212001526_InitialMigration1.Designer.cs" t="Include" />
+          <e p="20191212001526_InitialMigration1.cs" t="Include" />
+          <e p="20191212002906_InitialMigration2.Designer.cs" t="Include" />
+          <e p="20191212002906_InitialMigration2.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
@@ -57,9 +61,12 @@
             <e p="List.cshtml" t="Include" />
           </e>
           <e p="Home" t="Include">
+            <e p="Index.cshtml" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
+            <e p="Carousel.cshtml" t="Include" />
+            <e p="CarpartsSummary.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
@@ -71,7 +78,12 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="bower.json" t="Include" />
-        <e p="mono_crash.mem.23799.1.blob" t="Include" />
+        <e p="mono_crash.mem.10676.1.blob" t="Include" />
+        <e p="mono_crash.mem.15356.1.blob" t="Include" />
+        <e p="mono_crash.mem.17411.1.blob" t="Include" />
+        <e p="mono_crash.mem.22312.1.blob" t="Include" />
+        <e p="mono_crash.mem.23366.1.blob" t="Include" />
+        <e p="mono_crash.mem.31659.1.blob" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
@@ -88,7 +100,10 @@
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
-          <e p="images" t="Include" />
+          <e p="images" t="Include">
+            <e p="img1.jpg" t="Include" />
+            <e p="menu.png" t="Include" />
+          </e>
           <e p="js" t="Include">
             <e p="site.js" t="Include" />
           </e>

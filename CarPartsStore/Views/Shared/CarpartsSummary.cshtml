@@ -1,0 +1,16 @@
+@model Carpart
+
+<div class="col-sm-4 col-lg4 col-md-4">
+    <div class="thumbnail">
+        <img class="img-thumbnail" src="@Model.ImageThumbnailUrl" alt=""/>
+        <div class="caption">
+            <h3 class="pull-right">@Model.Name</h3>
+            <p>
+                <ul>
+                <li>@Model.Price.ToString("C")</li>
+                <li>@Model.ShortDescription</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</div>

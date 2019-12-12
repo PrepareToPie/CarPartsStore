@@ -37,8 +37,22 @@ namespace CarPartsStore.Data.Models
                         Price = 1230,
                         ShortDescription = "Short descript",
                         LongDescription = "Long descript",
-                        ImageUrl = "imageurl",
-                        ImageThumbnailUrl = "imagethumbnailurl"
+                        ImageUrl = "/home/ilsur/RiderProjects/CarPartsStore/CarPartsStore/wwwroot/images/img1.jpg",
+                        ImageThumbnailUrl =
+                            "/home/ilsur/RiderProjects/CarPartsStore/CarPartsStore/wwwroot/images/img1.jpg"
+                    },
+                new Carpart
+                    {
+                        Car = Cars["ASdasf12312s"],
+                        Category = Categories["Category 2"],
+                        Name = "Detail 2",
+                        Manufacturer = "Manufacturer 2",
+                        InStock = 1232,
+                        Price = 12300,
+                        ShortDescription = "Short descript",
+                        LongDescription = "Long descript",
+                        ImageUrl = "/home/ilsur/RiderProjects/CarPartsStore/CarPartsStore/wwwroot/images/img1.jpg",
+                        ImageThumbnailUrl = "/home/ilsur/RiderProjects/CarPartsStore/CarPartsStore/wwwroot/images/img1.jpg"
                     }
                     );
             }
