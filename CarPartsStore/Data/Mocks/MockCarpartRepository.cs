@@ -32,6 +32,42 @@ using CarPartsStore.Data.Models;
                         InStock = 123,
                         LongDescription = "LongDescript",
                         Manufacturer = "Manufacturer"
+                    },
+                    new Carpart
+                    {
+                        Name = "Колодки",
+                        Price = 1200,
+                        Car = new Car
+                        {
+                            Mark = "Toyota",
+                            Model = "Rav4",
+                            Vin = "ab1234ab"
+                        },
+                        Category = _categoryRepository.Categories.First(),
+                        CarpartId = 2,
+                        ImageThumbnailUrl = "ImageThumbUrl",
+                        ImageUrl = "ImageUrl",
+                        InStock = 123,
+                        LongDescription = "LongDescript",
+                        Manufacturer = "Japan"
+                    },
+                    new Carpart
+                    {
+                        Name = "Лампочка",
+                        Price = 180,
+                        Car = new Car
+                        {
+                            Mark = "Toyota",
+                            Model = "Corolla",
+                            Vin = "ab1234dd"
+                        },
+                        Category = _categoryRepository.Categories.Last(),
+                        CarpartId = 3,
+                        ImageThumbnailUrl = "ImageThumbUrl",
+                        ImageUrl = "ImageUrl",
+                        InStock = 123,
+                        LongDescription = "LongDescript",
+                        Manufacturer = "Japan"
                     }
                 };
             }
