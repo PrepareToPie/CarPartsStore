@@ -30,52 +30,52 @@ namespace CarPartsStore.Data.Models
                     new Carpart
                     {
                         Car = Cars["ASdasf12312s"],
-                        Category = Categories["Тормозные диски"],
+                        Category = Categories["РљР°С‚РµРіРѕСЂРёСЏ 1"],
                         Name = "BMW original",
                         Manufacturer = "Germany",
                         InStock = 23,
                         Price = 10000,
-                        ShortDescription = "Оригинальные тормозные диски",
-                        LongDescription = "Оригинальные и высококачественные тормозные диски",
+                        ShortDescription = "РљСЂР°С‚РєРѕРµ РѕРїРёСЃР°РЅРёСЏ С‚РѕРІР°СЂР°",
+                        LongDescription = "РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ С‚РѕРІР°СЂР° Р»Р°Р»Р°Р»Р°Р»Р°Р»",
                         ImageUrl = "/image/bmw_brake.jpg",
                         ImageThumbnailUrl = "/image/bmw_brake.jpg"
                     },
                     new Carpart
                     {
                         Car = Cars["ASdasf12312s"],
-                        Category = Categories["Тормозные диски"],
+                        Category = Categories["РљР°С‚РµРіРѕСЂРёСЏ 1"],
                         Name = "ShanJo",
                         Manufacturer = "China",
                         InStock = 21,
                         Price = 3000,
-                        ShortDescription = "Неоригинальные тормозные диски",
-                        LongDescription = "Неоригинальные и недолгосрочные тормозные диски",
+                        ShortDescription = "РљСЂР°С‚РєРѕРµ РѕРїРёСЃР°РЅРёСЏ С‚РѕРІР°СЂР°",
+                        LongDescription = "РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ С‚РѕРІР°СЂР° Р»Р°Р»Р°Р»Р°Р»Р°Р»",
                         ImageUrl = "/image/bmw_brake_noorig.jpg",
                         ImageThumbnailUrl = "/image/bmw_brake_noorig.jpg"
                     },
                     new Carpart
                     {
                         Car = Cars["HTtbda32132n"],
-                        Category = Categories["Тормозные диски"],
+                        Category = Categories["РљР°С‚РµРіРѕСЂРёСЏ 2"],
                         Name = "Toyota original",
                         Manufacturer = "Japan",
                         InStock = 12,
                         Price = 6000,
-                        ShortDescription = "Оригинальные тормозные диски",
-                        LongDescription = "Оригинальные и высококачественные тормозные диски",
+                        ShortDescription = "РљСЂР°С‚РєРѕРµ РѕРїРёСЃР°РЅРёСЏ С‚РѕРІР°СЂР°",
+                        LongDescription = "РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ С‚РѕРІР°СЂР° Р»Р°Р»Р°Р»Р°Р»Р°Р»",
                         ImageUrl = "/image/toyota_brake.jpg",
                         ImageThumbnailUrl = "/image/toyota_brake.jpg"
                     },
                     new Carpart
                     {
                         Car = Cars["HTtbda32132n"],
-                        Category = Categories["Колесные Шины"],
+                        Category = Categories["РљР°С‚РµРіРѕСЂРёСЏ 2"],
                         Name = "Michelin",
                         Manufacturer = "France",
                         InStock = 5,
                         Price = 8000,
-                        ShortDescription = "Зимние шины",
-                        LongDescription = "Высококачественные долгосрочные зимние шины",
+                        ShortDescription = "РљСЂР°С‚РєРѕРµ РѕРїРёСЃР°РЅРёСЏ С‚РѕРІР°СЂР°",
+                        LongDescription = "РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ С‚РѕРІР°СЂР° Р»Р°Р»Р°Р»Р°Р°Р°Р°Р»Р°Р»",
                         ImageUrl = "/image/michelin.jpg",
                         ImageThumbnailUrl = "/image/michelin.jpg"
                     }
@@ -95,8 +95,8 @@ namespace CarPartsStore.Data.Models
                 {
                     var genresList = new Category[]
                     {
-                        new Category {CategoryName = "Тормозные диски", Description = "Комплект тормозных дисков"},
-                        new Category {CategoryName = "Колесные Шины", Description = "Комплект зимних шин"}
+                        new Category {CategoryName = "РљР°С‚РµРіРѕСЂРёСЏ 1", Description = "Рћ РєР°С‚РµРіРѕСЂРёРё 1 С‚Р°С‚Р°С‚Р°"},
+                        new Category {CategoryName = "РљР°С‚РµРіРѕСЂРёСЏ 2", Description = "Рћ РєР°С‚РµРіРѕСЂРёРё 2 Р›Р°Р»Р°Р»Р°Р»"}
                     };
 
                     _categories = new Dictionary<string, Category>();

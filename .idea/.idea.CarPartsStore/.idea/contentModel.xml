@@ -40,8 +40,8 @@
           </e>
         </e>
         <e p="Migrations" t="Include">
-          <e p="20191212013134_InitialMigration.Designer.cs" t="Include" />
-          <e p="20191212013134_InitialMigration.cs" t="Include" />
+          <e p="20191214161646_ShopCart.Designer.cs" t="Include" />
+          <e p="20191214161646_ShopCart.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
@@ -82,7 +82,6 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="bower.json" t="Include" />
-        <e p="mono_crash.mem.31181.1.blob" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">

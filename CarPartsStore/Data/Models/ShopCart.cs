@@ -11,12 +11,17 @@ namespace CarPartsStore.Data.Models
     public class ShopCart
     {
         private readonly AppDbContext _appDbContext;
-        public ShopCart(AppDbContext appDbContext)
+
+        private ShopCart(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
+
         public string ShopCartId { get; set; }
-        public List<ShopCartItem> ListShopItems { get; set; }
+        public List<ShopCartItem> ShopCartItems { get; set; }
+
+        #region ShopCart methods
+
         public static ShopCart GetCart(IServiceProvider services)
         {
             ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
@@ -25,46 +30,78 @@ namespace CarPartsStore.Data.Models
 
             session.SetString("CartId", shopCartId);
 
-            return new ShopCart(context) { ShopCartId = shopCartId };
+            return new ShopCart(context) {ShopCartId = shopCartId};
         }
-        public void AddToCart(Carpart carpart)
+
+        public void AddToCart(Carpart carpart, int amount)
         {
-            _appDbContext.ShopCartItems.Add(new ShopCartItem 
+            var shopCartItem = _appDbContext.ShopCartItems.SingleOrDefault(s =>
+                s.Carpart.CarpartId == carpart.CarpartId && s.ShopCartId == ShopCartId);
+            if (shopCartItem == null)
             {
-                ShopCartId = ShopCartId,
-                Carpart = carpart,
-                Price = carpart.Price
-            });
+                shopCartItem = new ShopCartItem
+                {
+                    ShopCartId = ShopCartId,
+                    Carpart = carpart,
+                    Amount = 1
+                };
+                _appDbContext.ShopCartItems.Add(shopCartItem);
+            }
+            else
+            {
+                shopCartItem.Amount++;
+            }
 
             _appDbContext.SaveChanges();
         }
 
-        // public int RemoveFromCart(Carpart carpart)
-        // {
-        //     var shoppingCartItem = _appDbContext.ShopCartItems.SingleOrDefault(s =>
-        //         s.Carpart.CarpartId == carpart.CarpartId && s.ShopCartId == ShopCartId);
-        //     var localAmount = 0;
-        //     if (shoppingCartItem != null)
-        //     {
-        //         if(shoppingCartItem.)
-        //     }
-        // }
+        public int RemoveFromCart(Carpart carpart)
+        {
+            var shopCartItem = _appDbContext.ShopCartItems.SingleOrDefault(s =>
+                s.Carpart.CarpartId == carpart.CarpartId && s.ShopCartId == ShopCartId);
+            var localAmount = 0;
+            if (shopCartItem != null)
+            {
+                if (shopCartItem.Amount > 1)
+                {
+                    shopCartItem.Amount--;
+                    localAmount = shopCartItem.Amount;
+                }
+                else
+                {
+                    _appDbContext.ShopCartItems.Remove(shopCartItem);
+                }
+            }
+
+            _appDbContext.SaveChanges();
+            return localAmount;
+        }
+
+        public List<ShopCartItem> GetShopCartItems()
+        {
+            return ShopCartItems ??= _appDbContext.ShopCartItems.Where(c => c.ShopCartId == ShopCartId)
+                .Include(s => s.Carpart)
+                .ToList();
+        }
+
         public void ClearCart()
         {
-            var cartItems = _appDbContext.ShopCartItems.Where(cart => cart.ShopCartId == ShopCartId);
+            var cartItems = _appDbContext
+                .ShopCartItems
+                .Where(cart => cart.ShopCartId == ShopCartId);
             _appDbContext.ShopCartItems.RemoveRange(cartItems);
             _appDbContext.SaveChanges();
         }
-        public List<ShopCartItem> GetShopItems()
+
+        public decimal GetShopCartTotal()
         {
-            
-            return _appDbContext.ShopCartItems.Where(c => c.ShopCartId == ShopCartId).Include(s => s.Carpart).ToList();
+            var total = _appDbContext
+                .ShopCartItems
+                .Where(c => c.ShopCartId == ShopCartId)
+                .Select(c => c.Carpart.Price * c.Amount).Sum();
+            return total;
         }
 
-        // public GetShoppingCartTotal()
-        // {
-        //     var total = _appDbContext.ShopCartItems.Where(c=>c.ShopCartId == ShopCartId).Select(c=>c. * c.)
-        // }
-            
+        #endregion
     }
 }
