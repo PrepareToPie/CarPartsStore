@@ -1,7 +1,7 @@
 ﻿@model ShopCartViewModel
 
     @{
-        if (Model.ShopCart.ShopCartItems.Count == 0)
+        if (Model.ShopCart.ShopCartItems == null)
         {
             <h3 class="alert-danger">Корзина пуста!</h3>
         }

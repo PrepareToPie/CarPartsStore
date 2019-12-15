@@ -12,6 +12,7 @@
 </head>
 <body>
 
+      @await Component.InvokeAsync("ShopCartSummary")
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" asp-controller="Home" asp-action="Index">@ViewData["Title"] - CarpartsStore</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,18 +40,12 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Поиск" aria-label="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Поиск</button>
+      <button class="btn btn-primary" type="submit">Поиск</button>
     </form>
   </div>
 </nav>
-  <div class="row">
   <div class="col-lg-8 mx-auto">
-
-    <!-- List group-->
-    <ul class="list-group shadow">
     @RenderBody()
-    </ul>
-  </div>
   </div>
 <footer></footer>
 </body>

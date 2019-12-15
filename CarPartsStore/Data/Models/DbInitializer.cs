@@ -30,7 +30,7 @@ namespace CarPartsStore.Data.Models
                     new Carpart
                     {
                         Car = Cars["ASdasf12312s"],
-                        Category = Categories["Категория 1"],
+                        Category = Categories["Категория1"],
                         Name = "BMW original",
                         Manufacturer = "Germany",
                         InStock = 23,
@@ -43,7 +43,7 @@ namespace CarPartsStore.Data.Models
                     new Carpart
                     {
                         Car = Cars["ASdasf12312s"],
-                        Category = Categories["Категория 1"],
+                        Category = Categories["Категория1"],
                         Name = "ShanJo",
                         Manufacturer = "China",
                         InStock = 21,
@@ -56,7 +56,7 @@ namespace CarPartsStore.Data.Models
                     new Carpart
                     {
                         Car = Cars["HTtbda32132n"],
-                        Category = Categories["Категория 2"],
+                        Category = Categories["Категория2"],
                         Name = "Toyota original",
                         Manufacturer = "Japan",
                         InStock = 12,
@@ -69,7 +69,7 @@ namespace CarPartsStore.Data.Models
                     new Carpart
                     {
                         Car = Cars["HTtbda32132n"],
-                        Category = Categories["Категория 2"],
+                        Category = Categories["Категория2"],
                         Name = "Michelin",
                         Manufacturer = "France",
                         InStock = 5,
@@ -95,8 +95,8 @@ namespace CarPartsStore.Data.Models
                 {
                     var genresList = new Category[]
                     {
-                        new Category {CategoryName = "Категория 1", Description = "О категории 1 татата"},
-                        new Category {CategoryName = "Категория 2", Description = "О категории 2 Лалалал"}
+                        new Category {CategoryName = "Категория1", Description = "О категории 1 татата"},
+                        new Category {CategoryName = "Категория2", Description = "О категории 2 Лалалал"}
                     };
 
                     _categories = new Dictionary<string, Category>();

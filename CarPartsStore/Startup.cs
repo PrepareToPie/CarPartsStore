@@ -67,6 +67,11 @@ namespace CarPartsStore
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "categoryFilter",
+                    pattern: "Carpart/{action}/{category?}",
+                    defaults: new {Controller = "Carpart", action = "List"});
+
             });
             DbInitializer.Seed(serviceProvider);
         }

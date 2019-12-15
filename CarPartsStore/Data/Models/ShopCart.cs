@@ -15,6 +15,7 @@ namespace CarPartsStore.Data.Models
         private ShopCart(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
+            ShopCartItems = new List<ShopCartItem>();
         }
 
         public string ShopCartId { get; set; }
