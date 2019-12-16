@@ -30,17 +30,15 @@ namespace CarPartsStore
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {         
-            services.AddDbContext<AppDbContext>(options => 
+        {
+            services.AddDbContext<AppDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<ICarpartRepository, CarpartRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             // ��������� �������� MobileContext � �������� ������� � ����������
             services.AddControllersWithViews();
-
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShopCart.GetCart(sp));
-
             services.AddMvc();
             services.AddMemoryCache();
             services.AddSession();
@@ -59,22 +57,21 @@ namespace CarPartsStore
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseSession();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "categoryFilter",
+                    pattern: "Carpart/{action}/{category?}",
+                    defaults: new {Controller = "Carpart", action = "List"});
+
             });
             DbInitializer.Seed(serviceProvider);
         }

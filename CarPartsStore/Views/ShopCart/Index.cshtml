@@ -1,13 +1,13 @@
 ﻿@model ShopCartViewModel
 
     @{
-        if (Model.shopCart.ListShopItems.Count == 0)
+        if (Model.ShopCart.ShopCartItems == null)
         {
             <h3 class="alert-danger">Корзина пуста!</h3>
         }
         else
         {
-            foreach (var el in Model.shopCart.ListShopItems)
+            foreach (var el in Model.ShopCart.ShopCartItems)
             {
                 <div class="alert alert-warning mt-3">
                     <b>Товар:</b> @el.Carpart.Name<br/>

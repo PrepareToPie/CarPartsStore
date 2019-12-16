@@ -22,20 +22,37 @@ namespace CarPartsStore.Controllers
 
         public ViewResult Index()
         {
-            var items = _shopCart.GetShopItems();
-            _shopCart.ListShopItems = items;
-
-            var obj = new ShopCartViewModel { shopCart = _shopCart };
+            var items = _shopCart.GetShopCartItems();
+            _shopCart.ShopCartItems = items;
+            var obj = new ShopCartViewModel
+            {
+                ShopCart = _shopCart,
+                ShopCartTotal = _shopCart.GetShopCartTotal()
+            };
             return View(obj);
         }
 
-        public RedirectToActionResult AddToCart(int id)
+        public RedirectToActionResult AddToCart(int carpartId)
         {
-            var item = _carpartRep.Carparts.FirstOrDefault(i => i.CarpartId == id);
-            if(item != null)
+            var selectedCarPart = _carpartRep
+                .Carparts
+                .FirstOrDefault(i => i.CarpartId == carpartId);
+            if (selectedCarPart != null)
             {
-                _shopCart.AddToCart(item);
+                _shopCart.AddToCart(selectedCarPart, 1);
             }
+
+            return RedirectToAction("Index");
+        }
+
+        public RedirectToActionResult RemoveFromCart(int carpartId)
+        {
+            var selectedCarpart = _carpartRep.Carparts.FirstOrDefault(i => i.CarpartId == carpartId);
+            if (selectedCarpart != null)
+            {
+                _shopCart.RemoveFromCart(selectedCarpart);
+            }
+
             return RedirectToAction("Index");
         }
     }

@@ -8,6 +8,7 @@ namespace CarPartsStore.ViewModels
 {
     public class ShopCartViewModel
     {
-        public ShopCart shopCart { get; set; }
-    }
+        public ShopCart ShopCart { get; set; }
+        public decimal ShopCartTotal { get; set; }
+    };
 }

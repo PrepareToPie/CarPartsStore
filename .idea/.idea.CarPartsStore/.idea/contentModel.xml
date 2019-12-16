@@ -8,9 +8,12 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="CarPartsStore" t="IncludeRecursive">
         <e p="CarPartsStore.csproj" t="IncludeRecursive" />
-        <e p="Components" t="Include" />
+        <e p="Components" t="Include">
+          <e p="ShopCartSummary.cs" t="Include" />
+        </e>
         <e p="Controllers" t="Include">
           <e p="CarpartController.cs" t="Include" />
+          <e p="ContactController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="ShopCartController.cs" t="Include" />
         </e>
@@ -40,8 +43,10 @@
           </e>
         </e>
         <e p="Migrations" t="Include">
-          <e p="20191212013134_InitialMigration.Designer.cs" t="Include" />
-          <e p="20191212013134_InitialMigration.cs" t="Include" />
+          <e p="20191214161646_ShopCart.Designer.cs" t="Include" />
+          <e p="20191214161646_ShopCart.cs" t="Include" />
+          <e p="20191215224704_Initial.Designer.cs" t="Include" />
+          <e p="20191215224704_Initial.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
@@ -49,7 +54,9 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="TagHelpers" t="Include" />
+        <e p="TagHelpers" t="Include">
+          <e p="EmailTagHelper.cs" t="Include" />
+        </e>
         <e p="ViewModels" t="Include">
           <e p="CarpartListViewModel.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
@@ -60,14 +67,22 @@
           <e p="Carpart" t="Include">
             <e p="List.cshtml" t="Include" />
           </e>
+          <e p="Contact" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
-            <e p="AllCarparts.cshtml" t="Include" />
             <e p="Carousel.cshtml" t="Include" />
             <e p="CarpartsSummary.cshtml" t="Include" />
+            <e p="Components" t="Include">
+              <e p="ShopCartSummary" t="Include">
+                <e p="Default.cshtml" t="Include" />
+                <e p="Default.cshtml.cs" t="Include" />
+              </e>
+            </e>
             <e p="Error.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
@@ -82,7 +97,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="bower.json" t="Include" />
-        <e p="mono_crash.mem.31181.1.blob" t="Include" />
+        <e p="mono_crash.mem.1328.1.blob" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
