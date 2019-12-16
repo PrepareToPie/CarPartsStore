@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -37,6 +38,16 @@ namespace CarPartsStore
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<IOrderRepository, OrderRepository>(); 
             // ��������� �������� MobileContext � �������� ������� � ����������
+            services.AddIdentity<User, IdentityRole>(
+                opts => {
+                    opts.Password.RequiredLength = 4;   // минимальная длина
+                    opts.Password.RequireNonAlphanumeric = false;   // требуются ли не алфавитно-цифровые символы
+                    opts.Password.RequireLowercase = true; // требуются ли символы в нижнем регистре
+                    opts.Password.RequireUppercase = false; // требуются ли символы в верхнем регистре
+                    opts.Password.RequireDigit = true; // требуются ли цифры
+                    opts.User.RequireUniqueEmail = true;    // уникальный email
+                })
+                .AddEntityFrameworkStores<AppDbContext>();
             services.AddControllersWithViews();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShopCart.GetCart(sp));
@@ -63,7 +74,7 @@ namespace CarPartsStore
             app.UseStaticFiles();
             app.UseSession();
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
             
             app.UseEndpoints(endpoints =>

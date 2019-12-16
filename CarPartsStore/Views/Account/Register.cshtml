@@ -1,0 +1,39 @@
+﻿@model CarPartsStore.ViewModels.RegisterViewModel
+<h2>Регистрация нового пользователя</h2>
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="ModelOnly"></div>
+    <p></p>
+    <div>
+        <label asp-for="Email"></label>Email<br />
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <p></p>
+    <div>
+        <label asp-for="FirstName"></label>Имя<br />
+        <input asp-for="FirstName" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <p></p>
+    <div>
+        <label asp-for="LastName"></label>Фамилия<br />
+        <input asp-for="LastName" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <p></p>
+    <div>
+        <label asp-for="Password">Пароль</label><br />
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <p></p>
+    <div>
+        <label asp-for="PasswordConfirm">Подтвердить пароль</label><br />
+        <input asp-for="PasswordConfirm" />
+        <span asp-validation-for="PasswordConfirm"></span>
+    </div>
+    <p></p>
+    <div>
+        <input type="submit" value="Регистрация" />
+    </div>
+</form>
