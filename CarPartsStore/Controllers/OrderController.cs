@@ -1,9 +1,12 @@
 using CarPartsStore.Data.Interfaces;
 using CarPartsStore.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarPartsStore.Controllers
 {
+    [Authorize(Roles = "user")]
+
     public class OrderController : Controller
     {
         private readonly IOrderRepository _orderRepository;

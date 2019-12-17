@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using CarPartsStore.Data.Models;
 using CarPartsStore.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CarPartsStore.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class UsersController : Controller
     {
         UserManager<User> _userManager;
@@ -27,6 +29,7 @@ namespace CarPartsStore.Controllers
             {
                 User user = new User { Email = model.Email, UserName = model.Email, FirstName = model.FirstName, LastName = model.LastName };
                 var result = await _userManager.CreateAsync(user, model.Password);
+                await _userManager.AddToRoleAsync(user, "user");
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index");
