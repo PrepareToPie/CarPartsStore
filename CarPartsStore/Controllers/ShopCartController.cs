@@ -1,6 +1,7 @@
 ﻿using CarPartsStore.Data.Interfaces;
 using CarPartsStore.Data.Models;
 using CarPartsStore.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace CarPartsStore.Controllers
 {
+    [Authorize(Roles = "user")]
+
     public class ShopCartController : Controller
     {
         private readonly ICarpartRepository _carpartRep;

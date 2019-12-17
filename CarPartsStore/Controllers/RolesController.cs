@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using CarPartsStore.Data.Models;
 using CarPartsStore.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CarPartsStore.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class RolesController : Controller
     {
         RoleManager<IdentityRole> _roleManager;
