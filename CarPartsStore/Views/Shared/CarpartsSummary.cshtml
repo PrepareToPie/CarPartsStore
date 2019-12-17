@@ -11,7 +11,7 @@
       <p class="card-text">@Model.ShortDescription</p>
     </div>
     <div class="card-footer">
-      <button type="button" class="btn btn-outline-primary"><a asp-controller="ShopCart" asp-action="AddToCart">Добавить в корзину</a></button>
+      <a class="btn btn-outline-primary" asp-controller="ShopCart" asp-action="AddToCart" asp-route-carpartId="@Model.CarpartId">Добавить в корзину</a>
     </div>
   </div>
 </div>

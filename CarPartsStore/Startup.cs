@@ -35,6 +35,7 @@ namespace CarPartsStore
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<ICarpartRepository, CarpartRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>(); 
             // ��������� �������� MobileContext � �������� ������� � ����������
             services.AddControllersWithViews();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
