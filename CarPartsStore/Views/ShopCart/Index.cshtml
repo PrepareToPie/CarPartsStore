@@ -1,22 +1,45 @@
 ﻿@model ShopCartViewModel
 
-    @{
-        if (Model.ShopCart.ShopCartItems == null)
-        {
-            <h3 class="alert-danger">Корзина пуста!</h3>
-        }
-        else
-        {
-            foreach (var el in Model.ShopCart.ShopCartItems)
+<div class="row checkoutForm">
+    <h2>Ваша корзина</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Выбранное количество</th>
+                <th>Деталь</th>
+                <th class="text-right">Цена</th>
+                <th class="text-right">Пром итог</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var line in Model.ShopCart.ShopCartItems)
             {
-                <div class="alert alert-warning mt-3">
-                    <b>Товар:</b> @el.Carpart.Name<br/>
-                    <b>Цена:</b> @el.Carpart.Price.ToString("c")
-                    <b>О товаре:</b> @el.Carpart.ShortDescription
-                </div>
-                <div class="btn btn-light"><a asp-controller="ShopCart" asp-action="">Оплатить</a></div>
+                <tr>
+                    <td class="text-center">@line.Amount</td>
+                    <td class="text-left">@line.Carpart.Name</td>
+                    <td class="text-right">@line.Carpart.Price.ToString("c")</td>
+                    <td class="text-right">
+                        @((line.Amount * line.Carpart.Price).ToString("c"))
+                    </td>
+                    <td class="text-center"><a class="glyphicon glyphicon-remove text-danger remove" asp-controller="ShopCart" asp-action="RemoveFromCart" asp-route-drinkId="@line.Carpart.CarpartId"></a></td>
+                </tr>
             }
-        }
-            
-        
-    }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right">Итого к оплате:</td>
+                <td class="text-right">
+                    @Model.ShopCartTotal.ToString("c")
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="text-right">
+        <div class="btn-group ">
+            <a class="btn btn-success" asp-controller="Order" asp-action="Checkout">Оформить заказ</a>
+            <a class="btn btn-primary" asp-controller="Carpart" asp-action="List">Вернуться к товарам</a>
+        </div>
+    </div>
+</div>

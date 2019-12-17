@@ -1,0 +1,22 @@
+ 
+<li class="nav-item dropdown">
+    <a asp-controller="Carpart"
+       asp-action="List"
+       class="nav-link dropdown-toggle" data-toggle="dropdown">
+        Запчасти
+    </a>
+    <ul class="dropdown-menu">
+        @foreach (var category in Model)
+        {
+            <li>
+                <a class="dropdown-item" asp-controller="Carpart" asp-action="List"
+                   asp-route-category="@category.CategoryName">@category.CategoryName</a>
+            </li>
+        }
+        <li class="dropdown-item"></li>
+        <li>
+            <a class="dropdown-item" asp-controller="Carpart" asp-action="List" asp-route-category="">Посмотреть все</a>
+        </li>
+    </ul>
+</li>
+
