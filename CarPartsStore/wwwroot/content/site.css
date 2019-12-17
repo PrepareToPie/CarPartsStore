@@ -3,9 +3,7 @@
 }
 
 body {
-    background: rgba(0, 123, 255, 0.32);
-    background: -webkit-linear-gradient(to right, #d2ddff, #007bff);
-    background: linear-gradient(to right, #d2ddff, #007bff);
+    background: rgb(251, 255, 251);
     min-height: 100vh;
     padding-top: 4.5rem;
 }
@@ -15,28 +13,6 @@ body {
 }
 nav{
     padding:80px;
-}
-
-.loginForm{
-    margin:10%;
-}
-
-.checkoutForm{
-    margin-top:5%;
-}
-
-.orderForm{
-    margin-top:5%;
-    border-radius:20px;
-    border-style:solid;
-    border-color:#2fa4e7;
-}
-
-a.remove{
-    text-decoration:none;
-}
-a.remove:hover{
-    color:blue;
 }
 
 .center_div{
@@ -50,42 +26,6 @@ a.remove:hover{
 
 .marginTop1{
     margin-top:2%;
-}
-
-.formPullRightButton {
-    margin-right:10px !important
-}
-
-.carousel img {
-    min-width: 100%;
-}
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.jumbotron {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    margin-bottom: 0;
-    background-color: #fff;
-}
-
-
-.jumbotron p:last-child {
-    margin-bottom: 0;
-}
-
-.jumbotron h1 {
-    font-weight: 300;
-}
-
-.jumbotron .container {
-    max-width: 40rem;
 }
 
 footer {

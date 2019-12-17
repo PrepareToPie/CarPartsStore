@@ -19,41 +19,23 @@
       <Compile Remove="Migrations\20191211234656_Newbd.Designer.cs" />
       <Compile Remove="Migrations\20191211235139_New.cs" />
       <Compile Remove="Migrations\20191211235139_New.Designer.cs" />
-      <Compile Remove="Migrations\20191216130249_SS.cs" />
-      <Compile Remove="Migrations\20191216130249_SS.Designer.cs" />
-      <Compile Remove="Migrations\20191216130340_Initial.cs" />
-      <Compile Remove="Migrations\20191216130340_Initial.Designer.cs" />
-      <Compile Remove="Migrations\20191216150122_nn.cs" />
-      <Compile Remove="Migrations\20191216150122_nn.Designer.cs" />
-      <Compile Remove="Migrations\20191216150704_Initial.cs" />
-      <Compile Remove="Migrations\20191216150704_Initial.Designer.cs" />
-      <Compile Remove="Migrations\20191216182114_Initial.cs" />
-      <Compile Remove="Migrations\20191216182114_Initial.Designer.cs" />
-      <Compile Remove="Migrations\20191216182946_Initial.cs" />
-      <Compile Remove="Migrations\20191216182946_Initial.Designer.cs" />
-      <Compile Remove="Migrations\20191216183740_Initial.cs" />
-      <Compile Remove="Migrations\20191216183740_Initial.Designer.cs" />
-      <Compile Remove="Migrations\20191216184135_Initial.cs" />
-      <Compile Remove="Migrations\20191216184135_Initial.Designer.cs" />
-      <Compile Remove="Migrations\20191216185814_Initial.cs" />
-      <Compile Remove="Migrations\20191216185814_Initial.Designer.cs" />
-      <Compile Remove="Migrations\20191216190052_Initial.cs" />
-      <Compile Remove="Migrations\20191216190052_Initial.Designer.cs" />
     </ItemGroup>
 
 
     <ItemGroup>
+      <Folder Include="Migrations" />
+      <Folder Include="wwwroot\css" />
       <Folder Include="wwwroot\images" />
     </ItemGroup>
 
 
     <ItemGroup>
       <PackageReference Include="bootstrap" Version="4.4.1" />
+      <PackageReference Include="Identity.EntityFrameworkCore" Version="1.2.7" />
       <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
       <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

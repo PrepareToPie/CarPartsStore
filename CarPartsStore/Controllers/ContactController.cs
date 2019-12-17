@@ -3,7 +3,7 @@ namespace CarPartsStore.Controllers
 {
     public class ContactController: Controller
     {
-        ViewResult Index()
+        public ViewResult Index()
         {
             return View();
         }

@@ -1,8 +1,7 @@
 @model HomeViewModel
-
-@await Html.PartialAsync("Carousel")
-
-<h2>Детали в наличии</h2>
+<div class="py-5 text-center">
+    <h2>Детали в наличии</h2>
+</div>
 <div class="row">
     @foreach (var carpart in Model.IsInStock)
     {
