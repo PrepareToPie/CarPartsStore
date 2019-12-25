@@ -104,6 +104,82 @@ namespace CarPartsStore.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("CarPartsStore.Data.Models.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("AddressLine1")
+                        .HasColumnType("text");
+
+                    b.Property<string>("AddressLine2")
+                        .HasColumnType("text");
+
+                    b.Property<string>("City")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Country")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("OrderPlaced")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<decimal>("OrderTotal")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
+
+                    b.Property<string>("State")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ZipCode")
+                        .HasColumnType("text");
+
+                    b.HasKey("OrderId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("CarPartsStore.Data.Models.OrderDetail", b =>
+                {
+                    b.Property<int>("OrderDetailid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("CarpartId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("integer");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
+                    b.HasKey("OrderDetailid");
+
+                    b.HasIndex("CarpartId");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("OrderDetails");
+                });
+
             modelBuilder.Entity("CarPartsStore.Data.Models.ShopCartItem", b =>
                 {
                     b.Property<int>("ShopCartItemId")
@@ -336,6 +412,21 @@ namespace CarPartsStore.Migrations
                     b.HasOne("CarPartsStore.Data.Models.Car", "Car")
                         .WithMany()
                         .HasForeignKey("Vin");
+                });
+
+            modelBuilder.Entity("CarPartsStore.Data.Models.OrderDetail", b =>
+                {
+                    b.HasOne("CarPartsStore.Data.Models.Carpart", "Carpart")
+                        .WithMany()
+                        .HasForeignKey("CarpartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CarPartsStore.Data.Models.Order", "Order")
+                        .WithMany("OrderLines")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CarPartsStore.Data.Models.ShopCartItem", b =>

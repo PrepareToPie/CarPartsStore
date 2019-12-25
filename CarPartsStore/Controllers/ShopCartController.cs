@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 namespace CarPartsStore.Controllers
 {
     [Authorize(Roles = "user")]
-
     public class ShopCartController : Controller
     {
         private readonly ICarpartRepository _carpartRep;

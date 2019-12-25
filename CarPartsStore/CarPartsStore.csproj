@@ -19,11 +19,18 @@
       <Compile Remove="Migrations\20191211234656_Newbd.Designer.cs" />
       <Compile Remove="Migrations\20191211235139_New.cs" />
       <Compile Remove="Migrations\20191211235139_New.Designer.cs" />
+      <Compile Remove="Migrations\20191216191347_Initial.cs" />
+      <Compile Remove="Migrations\20191216191347_Initial.Designer.cs" />
+      <Compile Remove="Migrations\20191225182024_Initial.cs" />
+      <Compile Remove="Migrations\20191225182024_Initial.Designer.cs" />
+      <Compile Remove="Migrations\20191225183307_Initial.cs" />
+      <Compile Remove="Migrations\20191225183307_Initial.Designer.cs" />
+      <Compile Remove="Migrations\20191225183329_Amirkhan.cs" />
+      <Compile Remove="Migrations\20191225183329_Amirkhan.Designer.cs" />
     </ItemGroup>
 
 
     <ItemGroup>
-      <Folder Include="Migrations" />
       <Folder Include="wwwroot\css" />
       <Folder Include="wwwroot\images" />
     </ItemGroup>
