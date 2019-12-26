@@ -22,5 +22,30 @@ namespace CarPartsStore.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Checkout(Order order)
+        {
+            var items = _shopCart.GetShopCartItems();
+            _shopCart.ShopCartItems = items;
+
+            //if (_shopCart.ShopCartItems.Count == 0)
+            //{
+            //    ModelState.AddModelError("", "Корзина пуста");
+            //}
+            if (ModelState.IsValid)
+            {
+                _orderRepository.CreateOrder(order);
+                _shopCart.ClearCart();
+                return RedirectToAction("CheckoutComplete");
+            }
+            return View(order);
+        }
+
+        public IActionResult CheckoutComplete()
+        {
+            ViewBag.CheckoutCompleteMessage = "Спасибо за заказ!";
+            return View();
+        }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace CarPartsStore.Data.Models
 {
@@ -7,6 +8,9 @@ namespace CarPartsStore.Data.Models
     {
         public int OrderId { get; set; }
         public List<OrderDetail> OrderLines { get; set; }
+
+        [Display(Name = "FirstName")]
+        [Required(ErrorMessage ="No Name")]
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string AddressLine1 { get; set; }

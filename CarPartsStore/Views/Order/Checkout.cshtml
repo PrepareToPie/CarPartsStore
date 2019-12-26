@@ -5,7 +5,8 @@
         <h3>Пожалуйста, заполните форму:</h3>
     </div>
     <div class="col-md-8 order-md-1"> 
-        <form asp-action="Checkout" method="post" class="needs-validation" novalidate="" role="form">
+        <div asp-validation-summary="All"></div>
+        <form asp-action="Checkout" method="post" class="form-horizontal" novalidate="" role="form">
             <div class="row">
                 <div class="form-group col-md-6 mb-3">
                     <label asp-for="LastName"></label>
